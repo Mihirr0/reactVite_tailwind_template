@@ -16,6 +16,11 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Stats from './component/Stats'
 import Table from './component/Table'
+import DoubleChart from './component/DoubleChart'
+import LineChart from './component/DoubleChart'
+import ThreeColumnLayout from './component/SecondSection'
+import DashboardCard from './component/DoubleChart'
+import SecondColumnLayout from './component/FirstSection'
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -131,7 +136,7 @@ export default function Example() {
                             ))}
                           </ul>
                         </li>
-                        <li>
+                        {/* <li>
                           <div className="text-xs font-semibold leading-6 text-indigo-200">Your teams</div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
                             {teams.map((team) => (
@@ -153,7 +158,7 @@ export default function Example() {
                               </li>
                             ))}
                           </ul>
-                        </li>
+                        </li> */}
                         <li className="mt-auto">
                           <a
                             href="#"
@@ -179,12 +184,13 @@ export default function Example() {
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
-            <div className="flex h-16 shrink-0 items-center">
+            <div className="flex h-16 shrink-0 items-center text-white text-xl">
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=white"
                 alt="Your Company"
               />
+              Skilify Admin
             </div>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -214,7 +220,7 @@ export default function Example() {
                     ))}
                   </ul>
                 </li>
-                <li>
+                {/* <li>
                   <div className="text-xs font-semibold leading-6 text-indigo-200">Your teams</div>
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
                     {teams.map((team) => (
@@ -236,7 +242,7 @@ export default function Example() {
                       </li>
                     ))}
                   </ul>
-                </li>
+                </li> */}
                 <li className="mt-auto">
                   <a
                     href="#"
@@ -301,7 +307,7 @@ export default function Example() {
                     />
                     <span className="hidden lg:flex lg:items-center">
                       <span className="ml-4 text-sm font-semibold leading-6 text-gray-900" aria-hidden="true">
-                        Tom Cook
+                        The Mad
                       </span>
                       <ChevronDownIcon className="ml-2 h-5 w-5 text-gray-400" aria-hidden="true" />
                     </span>
@@ -341,8 +347,12 @@ export default function Example() {
           <main className="py-10">
             <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}
             <Stats/>
-            <Table/>
+            <SecondColumnLayout/>
 
+            <ThreeColumnLayout/>
+            
+            <Table/>
+          
 
 
             
